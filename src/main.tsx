@@ -7,6 +7,9 @@ import Login from "../components/auth/Login";
 import Signup from "../components/auth/Signup";
 import Welcome from "../components/Welcome.tsx";
 import RootLayout from "../components/layout/RootLayout.tsx";
+import Home from "../components/Home.tsx";
+import Dms from "../components/Dms.tsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,7 +28,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "admin",
-        element: <div>hello</div>,
+        element: <Home />,
+      },
+      {
+        path: "dms",
+        element: <Dms />,
       },
     ],
   },

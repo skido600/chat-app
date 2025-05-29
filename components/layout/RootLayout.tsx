@@ -1,20 +1,25 @@
 import React from "react";
 import Nav from "../Nav";
-import ChatBoard from "../ChatBoard";
+
 import { Outlet } from "react-router-dom";
+import { NavProvider } from "../../src/context/NavContext";
+import Topnav from "../ui/Topnav";
+
 function RootLayout() {
   return (
-    <main className="grid grid-cols-3">
-      <section className="w-[20%]">
-        <Nav />
-      </section>
-      <section className="w-[30%] border border-red-600">
-        <ChatBoard />
-      </section>
-      <section>
-        <Outlet />
-      </section>
-    </main>
+    <NavProvider>
+      <div className="block md:hidden fixed  left-0 right-0  ">
+        <Topnav />
+      </div>
+      <main className=" flex">
+        <section className="md:w-[8%] min-h-screen bg-[#12171D]  ">
+          <Nav />
+        </section>
+        <section className="w-full relative ">
+          <Outlet />
+        </section>
+      </main>
+    </NavProvider>
   );
 }
 
