@@ -7,11 +7,11 @@ import Topnav from "../ui/Topnav";
 function RootLayout() {
   return (
     <NavProvider>
-      <div className="block md:hidden fixed  left-0 right-0  ">
+      <div className="block md:hidden fixed z-50 left-0 right-0   ">
         <Topnav />
       </div>
       <main className=" flex">
-        <section className="md:w-[8%] min-h-screen bg-[#12171D]  ">
+        <section className="lg:w-[8%] md:w-[19%]  min-h-screen bg-[#12171D]  ">
           <Nav />
         </section>
         <section className="w-full relative ">

@@ -1,16 +1,14 @@
 import { useState, useEffect } from "react";
 import { FiSend } from "react-icons/fi";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import { CiCirclePlus } from "react-icons/ci";
-
-import { FiSearch } from "react-icons/fi";
+import Input_search from "../components/ui/Input_search";
 type User = {
   id: number;
   name: string;
   messages: string[];
   image: string;
 };
-
+import RequestC from "../components/ui/RequestC";
 import Empty from "../components/ui/Empty";
 
 const usersList: User[] = [
@@ -46,18 +44,54 @@ const usersList: User[] = [
     messages: ["Yo!", "Let's play a game."],
     image: "/icons/Rectangle 4537.png",
   },
-  //   {
-  //     id: 6,
-  //     name: "sky",
-  //     messages: ["Yo!", "Let's play a game."],
-  //     image: "/icons/Rectangle 4537.png",
-  //   },
-  //   {
-  //     id: 7,
-  //     name: "xyz",
-  //     messages: ["Yo!", "Let's play a game."],
-  //     image: "/icons/Rectangle 4537.png",
-  //   },
+  {
+    id: 6,
+    name: "sky",
+    messages: ["Yo!", "Let's play a game."],
+    image: "/icons/Rectangle 4537.png",
+  },
+  {
+    id: 7,
+    name: "xyz",
+    messages: ["Yo!", "Let's play a game."],
+    image: "/icons/Rectangle 4537.png",
+  },
+  {
+    id: 8,
+    name: "xyz",
+    messages: ["Yo!", "Let's play a game."],
+    image: "/icons/Rectangle 4537.png",
+  },
+  {
+    id: 9,
+    name: "xyz",
+    messages: ["Yo!", "Let's play a game."],
+    image: "/icons/Rectangle 4537.png",
+  },
+  {
+    id: 10,
+    name: "xyz",
+    messages: ["Yo!", "Let's play a game."],
+    image: "/icons/Rectangle 4537.png",
+  },
+  {
+    id: 67,
+    name: "xyz",
+    messages: ["Yo!", "Let's play a game."],
+    image: "/icons/Rectangle 4537.png",
+  },
+  {
+    id: 74,
+    name: "xyz",
+    messages: ["Yo!", "Let's play a game."],
+    image: "/icons/Rectangle 4537.png",
+  },
+  {
+    id: 7,
+    name: "xyz",
+    messages: ["Yo!", "Let's play a game."],
+    image: "/icons/Rectangle 4537.png",
+  },
 ];
 
 const Dms = () => {
@@ -98,38 +132,14 @@ const Dms = () => {
 
   return (
     <main>
-      <section className="grid md:grid-cols-3 h-screen  grid-cols-1 md:mt-0 ">
+      <section className="grid md:grid-cols-3 bg-[#1E2126] min-h-screen  grid-cols-1 md:mt-0 ">
         {/* Users List */}
         {!isMobile || !activeUser ? (
-          <div className="bg-[#1E2126]   pt-16 md:pt-8 text-white space-y-2">
-            {/* <Topnav /> */}
-            {/* <div className="flex md:hidden  items-center  px-4 py-2 justify-between">
-              <h1 className="text-xl">Chats</h1>
-              <div>
-                <CiCirclePlus size={25} />
-              </div>
-            </div> */}
-
-            <div className=" px-4 py-2 space-y-2">
-              <div className="flex items-center justify-between">
-                <h1 className="text-lg font-semibold">Chats</h1>
-                <div>
-                  <CiCirclePlus size={25} />
-                </div>
-              </div>
-
-              {/* Search Input */}
-              <div className=" border-b rounded-[8px] pt-4  border-[#2a2a2a]">
-                <div className="relative">
-                  <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-[#B6B6B6]" />
-                  <input
-                    type="text"
-                    placeholder="Search"
-                    className="w-full pl-10 pr-3 py-4 text-sm rounded bg-[#1a1f24] text-white outline-none placeholder-gray-[#B6B6B6]"
-                  />
-                </div>
-              </div>
-            </div>
+          <div className="bg-[#1E2126]  h-[90vh] overflow-y-auto pt-10 md:pt-2   text-white ">
+            <article>
+              <RequestC />
+              <Input_search />
+            </article>
             {usersList.map((user) => (
               <div
                 key={user.id}

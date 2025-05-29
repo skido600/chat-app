@@ -27,7 +27,7 @@ function Nav() {
   return (
     <>
       {/* Desktop Nav */}
-      <nav className="bg-[#12171D] h-screen shadow-2xs md:block hidden relative ">
+      <nav className="bg-[#12171D]  shadow-2xs md:block hidden relative ">
         <section className="flex flex-col  items-center justify-between pt-4 gap-y-7 ">
           <div className="logo">
             <Logo />
@@ -48,13 +48,13 @@ function Nav() {
           </ul>
         </section>
 
-        <div className="profile absolute bottom-0 w-full flex justify-center pb-4">
+        {/* <div className="profile absolute bottom-0 w-full flex justify-center pb-4">
           <img
             src="/icons/image_ts.avif"
             alt="user"
             className="rounded-full aspect-auto w-10 h-10 object-cover"
           />
-        </div>
+        </div> */}
       </nav>
 
       {/* Mobile Nav */}

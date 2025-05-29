@@ -5,7 +5,7 @@ import { useNav } from "../../src/context/NavContext";
 function Topnav() {
   const { toggleMobileNav } = useNav();
   return (
-    <section className="bg-[#1E2126] pb-4  backdrop-blur-2xl">
+    <section className="bg-[#1E2126]   backdrop-blur-2xl">
       <main className=" px-4 py-2">
         <div className="flex md:hidden justify-between  items-center ">
           <Logo />
