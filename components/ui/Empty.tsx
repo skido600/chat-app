@@ -1,5 +1,3 @@
-import React from "react";
-
 function Empty() {
   return (
     <section className="flex justify-center mt-40">
