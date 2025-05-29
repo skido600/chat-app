@@ -1,4 +1,3 @@
-import React from "react";
 import { IoMdHome } from "react-icons/io";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 import { IoSettingsOutline } from "react-icons/io5";
