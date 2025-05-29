@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FiSend } from "react-icons/fi";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { CiCirclePlus } from "react-icons/ci";

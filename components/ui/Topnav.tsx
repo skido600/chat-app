@@ -1,4 +1,3 @@
-import React from "react";
 import Logo from "../Logo";
 import { IoIosMenu } from "react-icons/io";
 import { useNav } from "../../src/context/NavContext";
